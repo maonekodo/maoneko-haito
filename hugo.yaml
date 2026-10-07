@@ -1,0 +1,77 @@
+baseURL: "https://maoneko-haito.com/"
+languageCode: ja
+title: 配当！マウントレーニアへの道
+theme: PaperMod
+hasCJKLanguage: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+timeZone: Asia/Tokyo
+
+paginate: 10
+
+params:
+  env: production
+  title: 配当！マウントレーニアへの道
+  description: "猫の医療費を配当でまかなうのが目標です。元MMO重課金・火力厨が、高配当株でコツコツ小金持ち山を目指す記録。"
+  keywords: [高配当株, 配当金, NISA, 資産形成, 新NISA, 投資初心者]
+  author: まおねこ
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowToc: true
+  TocOpen: false
+  ShowWordCount: false
+  comments: false
+  defaultTheme: light
+  disableThemeToggle: true
+
+  assets:
+    disableHLJS: true
+    favicon: "/favicon.ico"
+
+  homeInfoParams:
+    Title: "標高ゼロから、小金持ち山へ🏔️"
+    Content: >
+      猫2匹と暮らすズボラ飼い主です。
+
+      猫の医療費を配当でまかなうのが目標で、高配当株をコツコツ買っています。
+
+      元MMO重課金・火力厨。今は課金先を株に変えました。
+      リベシティで勉強中です。
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+menu:
+  main:
+    - identifier: posts
+      name: 記事一覧
+      url: /posts/
+      weight: 10
+    - identifier: progress
+      name: 現在地
+      url: /progress/
+      weight: 20
+    - identifier: about
+      name: このブログについて
+      url: /about/
+      weight: 30
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

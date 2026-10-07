@@ -1,0 +1,15 @@
+{{- $c := .Get "c" | default "maoneko" -}}
+{{- $names := dict "maoneko" "まおねこ" "chapio" "チャピオ" "kuroko" "クロコ" "minai" "ミナイ" "kuromaku" "くろまく" -}}
+{{- $name := index $names $c | default "まおねこ" -}}
+{{- $side := .Get "side" | default "left" -}}
+{{/* mood="smile" などで表情違いのアイコンに差し替える（枠の色・名前はそのまま） */}}
+{{- $mood := .Get "mood" -}}
+{{- $file := $c -}}
+{{- if $mood -}}{{- $file = printf "%s-%s" $c $mood -}}{{- end -}}
+<div class="voice voice--{{ $side }} voice--{{ $c }}">
+  <div class="voice__icon">
+    <img src="/images/chara/{{ $file }}.png" alt="{{ $name }}" loading="lazy" width="64" height="64">
+    <span class="voice__name">{{ $name }}</span>
+  </div>
+  <div class="voice__bubble">{{ .Inner | markdownify }}</div>
+</div>
