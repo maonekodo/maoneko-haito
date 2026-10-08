@@ -8,6 +8,10 @@ buildDrafts: false
 buildFuture: false
 timeZone: Asia/Tokyo
 
+services:
+  googleAnalytics:
+    ID: G-VQT3F3QTTN
+
 paginate: 10
 
 params:
