@@ -1,0 +1,39 @@
+{{/* フッターのタグ一覧。記事数の多いタグほど大きく表示する。
+     .Site.Taxonomies のキーは小文字化されるため、表示名は記事のフロントマターから拾う
+     （「新NISA」が「新nisa」になるのを防ぐ） */}}
+{{- $tags := site.Taxonomies.tags -}}
+{{- if $tags -}}
+
+{{- /* urlize したキー → 元の表記 の対応表を作る */ -}}
+{{- $labels := dict -}}
+{{- range site.RegularPages -}}
+  {{- range .Params.tags -}}
+    {{- $labels = merge $labels (dict (. | urlize) .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $max := 1 -}}
+{{- range $name, $pages := $tags -}}
+  {{- if gt (len $pages) $max }}{{ $max = len $pages }}{{ end -}}
+{{- end -}}
+
+<div class="footer-tags">
+  <div class="footer-tags__inner">
+    <h2 class="footer-tags__title">タグ</h2>
+    <div class="footer-tags__list">
+      {{- range $name, $pages := $tags -}}
+        {{- $n := len $pages -}}
+        {{- $label := index $labels ($name | urlize) | default $name -}}
+        {{/* 件数に応じて small / mid / large の3段階に振り分ける */}}
+        {{- $size := "small" -}}
+        {{- if ge $n (add (div $max 2) 1) }}{{ $size = "large" }}
+        {{- else if gt $n 1 }}{{ $size = "mid" }}{{ end -}}
+        <a class="footer-tags__tag footer-tags__tag--{{ $size }}"
+           href="{{ "/tags/" | relLangURL }}{{ $name | urlize }}/">
+          <span class="footer-tags__hash">#</span>{{ $label }}<span class="footer-tags__count">{{ $n }}</span>
+        </a>
+      {{- end -}}
+    </div>
+  </div>
+</div>
+{{- end -}}

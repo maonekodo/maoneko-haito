@@ -244,3 +244,73 @@ body {
   border-bottom: 1px solid var(--rainier-line) !important;
   box-shadow: 0 2px 8px rgba(58, 51, 48, .06);
 }
+
+/* ===========================================================
+   フッターのタグ一覧
+   =========================================================== */
+.footer-tags {
+  margin-top: 40px;
+  padding: 32px 0 8px;
+  border-top: 1px solid var(--rainier-line);
+  background: var(--rainier-sun-soft);
+}
+.footer-tags__inner {
+  max-width: var(--main-width, 720px);
+  margin: 0 auto;
+  padding: 0 var(--gap, 24px);
+}
+.footer-tags__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rainier-text);
+  margin: 0 0 14px;
+  padding-left: 10px;
+  border-left: 4px solid var(--rainier-sun);
+  line-height: 1.2;
+}
+.footer-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.footer-tags__tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--rainier-card);
+  border: 1px solid var(--rainier-line);
+  border-radius: 999px;
+  padding: 5px 12px;
+  color: var(--rainier-text-sub) !important;
+  text-decoration: none !important;
+  line-height: 1.4;
+  transition: all .15s ease;
+}
+.footer-tags__tag:hover {
+  border-color: var(--rainier-sun);
+  color: var(--rainier-sun) !important;
+  transform: translateY(-1px);
+}
+.footer-tags__hash { opacity: .5; margin-right: 1px; }
+.footer-tags__count {
+  font-size: .72em;
+  opacity: .55;
+  margin-left: 5px;
+}
+
+/* 記事数が多いタグほど大きく */
+.footer-tags__tag--small { font-size: .8rem; }
+.footer-tags__tag--mid   { font-size: .9rem; }
+.footer-tags__tag--large {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--rainier-text) !important;
+  border-color: var(--rainier-sun);
+}
+
+@media (max-width: 600px) {
+  .footer-tags { margin-top: 28px; padding: 24px 0 4px; }
+  .footer-tags__list { gap: 6px; }
+  .footer-tags__tag { padding: 4px 10px; }
+  .footer-tags__tag--large { font-size: .95rem; }
+}
