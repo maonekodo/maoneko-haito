@@ -62,6 +62,14 @@ menu:
       name: このブログについて
       url: /about/
       weight: 30
+    - identifier: privacy
+      name: プライバシーポリシー
+      url: /privacy-policy/
+      weight: 40
+    - identifier: contact
+      name: お問い合わせ
+      url: /contact/
+      weight: 50
 
 markup:
   goldmark:

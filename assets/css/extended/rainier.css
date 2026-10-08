@@ -232,3 +232,15 @@ body {
   .voice__icon img{ width:52px; height:52px; }
   .voice__bubble{ font-size:.9rem; padding:10px 13px; }
 }
+
+/* ===========================================================
+   ヘッダー追従（スクロールしても上に貼りつく）
+   =========================================================== */
+.header {
+  position: sticky !important;
+  top: 0;
+  z-index: 30;
+  background: var(--rainier-bg) !important;
+  border-bottom: 1px solid var(--rainier-line) !important;
+  box-shadow: 0 2px 8px rgba(58, 51, 48, .06);
+}
