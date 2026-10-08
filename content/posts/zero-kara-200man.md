@@ -39,7 +39,7 @@ cover:
 
 {{< voice c="chapio" >}}…本当にあんまり浪費しない人なんですね〜{{< /voice >}}
 
-![右肩上がりのグラフを眺めるまおねことチャピオ](/images/posts/zero-kara-200man-01-graph.png)
+![右肩上がりのグラフを眺めるまおねことチャピオ](/images/posts/zero-kara-200man-01-graph.jpg)
 
 ---
 
@@ -80,7 +80,7 @@ cover:
 
 毎月の通信費が、はっきり下がりました。
 
-![スマートフォンに下向きの矢印が出て、満足そうなまおねことミナイ](/images/posts/zero-kara-200man-02-fixed-cost.png)
+![スマートフォンに下向きの矢印が出て、満足そうなまおねことミナイ](/images/posts/zero-kara-200man-02-fixed-cost.jpg)
 
 **浮いたぶんは、そのまま積立に回りました。**
 
@@ -120,7 +120,7 @@ cover:
 
 **これだけです。**
 
-![山道の途中から頂上を見上げるまおねことクロコ](/images/posts/zero-kara-200man-03-mountain.png)
+![山道の途中から頂上を見上げるまおねことクロコ](/images/posts/zero-kara-200man-03-mountain.jpg)
 
 ---
 

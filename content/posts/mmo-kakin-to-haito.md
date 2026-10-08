@@ -32,7 +32,7 @@ cover:
 
 引退したときの**貯蓄はゼロ**でした。
 
-![スマホのゲームに夢中のまおねこと、空っぽになった貯金箱](/images/posts/mmo-kakin-to-haito-01-game.png)
+![スマホのゲームに夢中のまおねこと、空っぽになった貯金箱](/images/posts/mmo-kakin-to-haito-01-game.jpg)
 
 ---
 
@@ -74,7 +74,7 @@ cover:
 
 貯めたかったからというわけではなく、**管理したかったから**始めました。
 
-![ノートパソコンで整った表を眺めて満足しているまおねこ](/images/posts/mmo-kakin-to-haito-02-spreadsheet.png)
+![ノートパソコンで整った表を眺めて満足しているまおねこ](/images/posts/mmo-kakin-to-haito-02-spreadsheet.jpg)
 
 ---
 
@@ -102,7 +102,7 @@ cover:
 
 そこから毎日見るようになりました。
 
-![タブレットで動画を見て驚いているまおねこ](/images/posts/mmo-kakin-to-haito-03-video.png)
+![タブレットで動画を見て驚いているまおねこ](/images/posts/mmo-kakin-to-haito-03-video.jpg)
 
 **それまでお金のことを何も知りませんでした**。
 
