@@ -1,0 +1,33 @@
+{{/* ホームの右側に出すサイドバー。プロフィールとカテゴリ */}}
+<aside class="sidebar">
+
+  <div class="sidebar-widget">
+    <h3 class="sidebar-title">🏔️ このブログについて</h3>
+    <div class="sidebar-profile">
+      <img src="/images/chara/maoneko.png" alt="まおねこ" width="72" height="72">
+      <p>
+        猫2匹と暮らすズボラ飼い主です。<br>
+        猫の医療費を配当でまかなうのが目標で、高配当株をコツコツ買っています。<br>
+        元MMO重課金・火力厨。今は課金先を株に変えました。
+      </p>
+      <a href="https://x.com/maoneko_haito" class="sidebar-x-btn" target="_blank" rel="noopener">
+        𝕏 フォローする @maoneko_haito
+      </a>
+    </div>
+  </div>
+
+  {{- with site.Taxonomies.categories }}
+  <div class="sidebar-widget">
+    <h3 class="sidebar-title">📂 カテゴリ</h3>
+    <ul class="sidebar-categories">
+      {{- range site.Taxonomies.categories.ByCount }}
+      <li>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+        <span class="sidebar-count">{{ .Count }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+
+</aside>
