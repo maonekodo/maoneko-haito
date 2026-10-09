@@ -1,0 +1,6 @@
+{{- /* リンク管理表がIMPORTDATAで読むためのCSV。公開済みの記事だけを古い順に出す */ -}}
+No.,スラッグ,公開日,更新日,カテゴリ,タイトル
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+{{- range $i, $p := sort $posts "Date" "asc" }}
+{{ printf "#%d" (add $i 1) }},{{ $p.RelPermalink }},{{ $p.Date.Format "2006/01/02" }},{{ $p.Lastmod.Format "2006/01/02" }},{{ delimit $p.Params.categories "・" }},"{{ replace $p.Title "\"" "\"\"" }}"
+{{- end -}}

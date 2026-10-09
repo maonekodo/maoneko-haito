@@ -86,8 +86,15 @@ markup:
   highlight:
     noClasses: false
 
+outputFormats:
+  LINKCSV:
+    mediaType: "text/csv"
+    baseName: "links"
+    isPlainText: true
+
 outputs:
   home:
     - HTML
     - RSS
     - JSON
+    - LINKCSV
