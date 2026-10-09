@@ -8,7 +8,7 @@
 {{- if $mood -}}{{- $file = printf "%s-%s" $c $mood -}}{{- end -}}
 <div class="voice voice--{{ $side }} voice--{{ $c }}">
   <div class="voice__icon">
-    <img src="/images/chara/{{ $file }}.png" alt="{{ $name }}" loading="lazy" width="64" height="64">
+    <img src="/images/chara/{{ $file }}.png" alt="{{ $name }}" loading="lazy" width="80" height="80">
     <span class="voice__name">{{ $name }}</span>
   </div>
   <div class="voice__bubble">{{ .Inner | markdownify }}</div>
