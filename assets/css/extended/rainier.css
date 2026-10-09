@@ -427,3 +427,26 @@ body {
 
 /* ホームと一覧ページだけ、2列が入るように幅を広げる */
 .list .main { max-width: 1100px; }
+
+/* ===========================================================
+   本文中の画像
+   線が少ない挿絵は小さめ。文字が入るものは class="wide" で大きく
+   =========================================================== */
+.post-content img {
+  display: block;
+  margin: 24px auto;
+  max-width: 65%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 文字が入っている画像（しろとらTVなど）は本文幅いっぱい */
+.post-content img.wide,
+.post-content .wide img {
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  /* スマホは画面が狭いので、挿絵も本文幅いっぱいでよい */
+  .post-content img { max-width: 100%; }
+}
