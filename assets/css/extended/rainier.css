@@ -440,9 +440,10 @@ body {
   border-radius: 10px;
 }
 
-/* 文字が入っている画像（しろとらTVなど）は本文幅いっぱい */
-.post-content img.wide,
-.post-content .wide img {
+/* 文字が入っている画像（しろとらTVなど）は本文幅いっぱい。
+   マークダウンで画像パスの末尾に #wide を付けるだけでよい
+   例: ![説明](/images/posts/xxx.png#wide) */
+.post-content img[src$="#wide"] {
   max-width: 100%;
 }
 
