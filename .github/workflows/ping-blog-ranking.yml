@@ -1,0 +1,73 @@
+name: Blog Ranking Ping
+
+# 人気ブログランキングへ更新を通知する。
+# ・新しい記事をpushしたとき（ただし未来日付の予約記事は、まだ公開されていないので送らない）
+# ・予約記事の公開日の朝（scheduled-rebuild から呼ばれる）
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'content/posts/**'
+  workflow_call:      # scheduled-rebuild から呼べるようにする
+  workflow_dispatch:  # 手動でも送れるようにする
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 公開済みの記事が増えたか確認
+        id: check
+        run: |
+          # push以外（公開日の朝・手動）は無条件で送る
+          if [ "${{ github.event_name }}" != "push" ]; then
+            echo "skip=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          TODAY=$(TZ=Asia/Tokyo date +%Y-%m-%d)
+          CHANGED=$(git diff --name-only HEAD~1 HEAD -- 'content/posts/*.md' | grep -v '_index.md' || true)
+
+          if [ -z "$CHANGED" ]; then
+            echo "変更された記事なし、スキップします"
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # 未来日付の予約記事しか無い場合は、まだ公開されていないので送らない
+          SEND=false
+          for f in $CHANGED; do
+            [ -f "$f" ] || continue
+            DATE=$(grep -m1 '^date:' "$f" | sed -E 's/^date:[[:space:]]*//; s/"//g' | cut -c1-10)
+            echo "$f -> $DATE"
+            if [ "$DATE" \< "$TODAY" ] || [ "$DATE" = "$TODAY" ]; then
+              SEND=true
+            fi
+          done
+
+          if [ "$SEND" = "true" ]; then
+            echo "公開済みの記事が含まれるので送信します"
+            echo "skip=false" >> $GITHUB_OUTPUT
+          else
+            echo "予約記事のみ、公開日の朝に送信します"
+            echo "skip=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Ping 人気ブログランキング
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          curl -s -o /dev/null -w "人気ブログランキング ping: %{http_code}\n" \
+            -X POST "https://blog.with2.net/ping.php/2142765/1791628966" \
+            -H "Content-Type: text/xml" \
+            -d '<?xml version="1.0"?>
+          <methodCall>
+            <methodName>weblogUpdates.ping</methodName>
+            <params>
+              <param><value>配当！マウントレーニアへの道</value></param>
+              <param><value>https://maoneko-haito.com</value></param>
+            </params>
+          </methodCall>'

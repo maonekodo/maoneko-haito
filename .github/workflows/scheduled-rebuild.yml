@@ -16,6 +16,8 @@ permissions:
 jobs:
   rebuild:
     runs-on: ubuntu-latest
+    outputs:
+      found: ${{ steps.check.outputs.found }}
     steps:
       - uses: actions/checkout@v4
 
@@ -45,3 +47,16 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit --allow-empty -m "自動再ビルド（${TODAY} 公開分）"
           git push
+
+  # 予約記事が公開された日は、ランキングにもPingを送る
+  wait-for-deploy:
+    needs: rebuild
+    if: needs.rebuild.outputs.found == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      # Cloudflare Pagesのビルドが終わってからPingしたいので少し待つ
+      - run: sleep 240
+
+  ping:
+    needs: wait-for-deploy
+    uses: ./.github/workflows/ping-blog-ranking.yml
