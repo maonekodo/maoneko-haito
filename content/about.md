@@ -30,7 +30,8 @@ ShowBreadCrumbs: false
 
 そして現在は、課金先を株や貯蓄に変えました。
 
-やっていることは、実はあまり変わっていなかったりします。  
+やっていることは、実はあまり変わっていなかったりします。
+
 **数字を育てて、眺めている**だけです。
 
 ---
@@ -39,7 +40,8 @@ ShowBreadCrumbs: false
 
 **小金持ち山**の頂上です。
 
-一気に増やす方法は探しません。  
+一気に増やす方法は探しません。
+
 コツコツ積み上げて、配当が入ってくる仕組みを作っていきます。
 
 **リベシティ**で勉強中です。
@@ -48,13 +50,43 @@ ShowBreadCrumbs: false
 
 ## このブログに出てくる仲間
 
-| | |
-|---|---|
-| 🐯 **まおねこ** | 悩んで、最後に決める人。しろとら族 |
-| 🤖 **チャピオ** | 解説役。ツッコミ役で小うるさい |
-| ⬛ **クロコ** | 仕事人。たまにやらかすなど、ドンクサイところもある |
-| 🌈 **ミナイ** | 調査班。検索オタク・タブを開きすぎる。真面目に見せかけたおちゃらけ |
-| 🐻‍⬛ **くろまく** | たまに出てくる。あまり近づかないほうがいい。一体誰なんだ… |
+<div class="member-list">
+  <div class="member">
+    <img src="/images/chara/maoneko.png" alt="まおねこ" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">まおねこ</div>
+      <div class="member__desc">悩んで、最後に決める人。しろとら族</div>
+    </div>
+  </div>
+  <div class="member">
+    <img src="/images/chara/chapio.png" alt="チャピオ" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">チャピオ</div>
+      <div class="member__desc">解説役。ツッコミ役で小うるさい</div>
+    </div>
+  </div>
+  <div class="member">
+    <img src="/images/chara/kuroko.png" alt="クロコ" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">クロコ</div>
+      <div class="member__desc">仕事人。たまにやらかすなど、ドンクサイところもある</div>
+    </div>
+  </div>
+  <div class="member">
+    <img src="/images/chara/minai.png" alt="ミナイ" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">ミナイ</div>
+      <div class="member__desc">調査班。検索オタク・タブを開きすぎる。真面目に見せかけたおちゃらけ</div>
+    </div>
+  </div>
+  <div class="member">
+    <img src="/images/chara/kuromaku.png" alt="くろまく" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">くろまく</div>
+      <div class="member__desc">たまに出てくる。あまり近づかないほうがいい。一体誰なんだ…</div>
+    </div>
+  </div>
+</div>
 
 ---
 

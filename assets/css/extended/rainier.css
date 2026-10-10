@@ -451,3 +451,56 @@ body {
   /* スマホは画面が狭いので、挿絵も本文幅いっぱいでよい */
   .post-content img { max-width: 100%; }
 }
+
+/* ===========================================================
+   このブログに出てくる仲間（aboutページ）
+   =========================================================== */
+.member-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 22px 0;
+}
+.member {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--rainier-card);
+  border: 1px solid var(--rainier-line);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+.member img {
+  flex: 0 0 72px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--rainier-line);
+  background: #fff;
+  margin: 0;
+  max-width: none;
+}
+.member__name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--rainier-text);
+  margin-bottom: 3px;
+}
+.member__desc {
+  font-size: .88rem;
+  line-height: 1.7;
+  color: var(--rainier-text-sub);
+}
+
+/* キャラごとにアイコンの枠色を変える（吹き出しと同じ色） */
+.member:nth-child(1) img { border-color: #8BD2FD; }
+.member:nth-child(2) img { border-color: #D9ECC1; }
+.member:nth-child(3) img { border-color: #FBE6A8; }
+.member:nth-child(4) img { border-color: #FDDADC; }
+.member:nth-child(5) img { border-color: #E2D0EF; }
+
+@media (max-width: 600px) {
+  .member { gap: 11px; padding: 10px 12px; }
+  .member img { flex: 0 0 58px; width: 58px; height: 58px; }
+  .member__desc { font-size: .82rem; }
+}
