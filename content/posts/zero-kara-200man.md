@@ -2,7 +2,7 @@
 no: 2
 title: "貯蓄ゼロから2年で200万円｜知った順にやっただけの記録"
 date: 2026-10-12
-lastmod: 2026-10-17
+lastmod: 2026-10-12
 draft: false
 categories: ["はじめに"]
 tags: ["資産形成", "新NISA", "投資初心者", "固定費"]
