@@ -71,3 +71,18 @@ jobs:
               <param><value>https://maoneko-haito.com</value></param>
             </params>
           </methodCall>'
+
+      - name: Ping にほんブログ村
+        if: steps.check.outputs.skip == 'false'
+        run: |
+          curl -s -o /dev/null -w "にほんブログ村 ping: %{http_code}\n" \
+            -X POST "https://ping.blogmura.com/xmlrpc/5g2r7uokg819/" \
+            -H "Content-Type: text/xml" \
+            -d '<?xml version="1.0"?>
+          <methodCall>
+            <methodName>weblogUpdates.ping</methodName>
+            <params>
+              <param><value>配当！マウントレーニアへの道</value></param>
+              <param><value>https://maoneko-haito.com</value></param>
+            </params>
+          </methodCall>'
