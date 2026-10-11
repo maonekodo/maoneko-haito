@@ -1,7 +1,7 @@
 ---
 no: 2
 title: "貯蓄ゼロから2年で200万円｜知った順にやっただけの記録"
-date: 2026-10-17
+date: 2026-10-12
 lastmod: 2026-10-17
 draft: false
 categories: ["はじめに"]
