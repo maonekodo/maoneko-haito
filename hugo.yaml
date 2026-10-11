@@ -98,3 +98,8 @@ outputs:
     - RSS
     - JSON
     - LINKCSV
+
+# 更新日は front matter の lastmod を最優先にする。
+# これが無いとファイルを一括で触ったときに全記事の更新日が同じ日になってしまう。
+frontmatter:
+  lastmod: ['lastmod', ':fileModTime', ':default']
