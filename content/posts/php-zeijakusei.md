@@ -20,7 +20,7 @@ cover:
 
 とりあえずチャピオに聞いてみました。
 
-![しろとらTV。PHPの脆弱性を攻撃できるのかチャピオに聞く4コマ漫画](/images/posts/php-zeijakusei-01-manga.jpg)
+![しろとらTV。PHPの脆弱性を攻撃できるのかチャピオに聞く4コマ漫画](/images/posts/php-zeijakusei-01-manga.jpg#wide)
 
 {{< voice c="maoneko" side="right" >}}急にコンプラの壁を建てるやん{{< /voice >}}
 
@@ -157,7 +157,7 @@ OSやサーバー会社が出す独自の修正に頼ることになります。
 
 ここが一番ややこしいところだと思います。
 
-![しろとらTV。PHPの脆弱性に個人は何をすればいいのかを解説する漫画](/images/posts/php-zeijakusei-02-manga.jpg)
+![しろとらTV。PHPの脆弱性に個人は何をすればいいのかを解説する漫画](/images/posts/php-zeijakusei-02-manga.jpg#wide)
 
 {{< voice c="maoneko" side="right" >}}パソコン消しといたら防げるのでは？{{< /voice >}}
 
