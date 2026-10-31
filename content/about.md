@@ -80,6 +80,13 @@ ShowBreadCrumbs: false
     </div>
   </div>
   <div class="member">
+    <img src="/images/chara/myuta.png" alt="ミュタ" width="72" height="72" loading="lazy">
+    <div class="member__body">
+      <div class="member__name">ミュタ</div>
+      <div class="member__desc">お使い係。黙って動く縁の下の力持ち。みんなのマスコット</div>
+    </div>
+  </div>
+  <div class="member">
     <img src="/images/chara/kuromaku.png" alt="くろまく" width="72" height="72" loading="lazy">
     <div class="member__body">
       <div class="member__name">くろまく</div>
