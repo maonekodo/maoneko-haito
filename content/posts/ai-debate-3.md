@@ -24,7 +24,7 @@ cover:
 
 そこで、**AIを3人並べて、それぞれ別の立場で討論させてみる**ことにしました。
 
-{{< voice c="maoneko" side="right" >}}自分で考えるより早いやろ{{< /voice >}}
+{{< voice c="maoneko" side="right" >}}自分で考えるより早いからな{{< /voice >}}
 
 {{< voice c="kuroko" side="left" >}}それでいいんですか{{< /voice >}}
 
@@ -77,7 +77,7 @@ cover:
 
 最後に話す人だけが有利にならないように、という狙いです。
 
-{{< voice c="maoneko" side="right" >}}ルールあると結構真面目になるご機嫌なヤツら{{< /voice >}}
+{{< voice c="maoneko" side="right" >}}ルールがあると結構真面目になるご機嫌なヤツら{{< /voice >}}
 
 ---
 
