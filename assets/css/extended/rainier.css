@@ -250,6 +250,85 @@ body {
 }
 
 /* ===========================================================
+   フッターのカテゴリ一覧（タグ一覧の上）
+   PCはサイドバーにカテゴリがあるが、768px以下でサイドバーごと消えるため、
+   スマホ・タブレットだけに出す（2026-11-03）
+   =========================================================== */
+.footer-cats {
+  display: none;
+  margin-top: 40px;
+  padding: 28px 0 24px;
+  border-top: 1px solid var(--rainier-line);
+  background: var(--rainier-sun-soft);
+}
+@media (max-width: 768px) {
+  .footer-cats { display: block; }
+}
+.footer-cats__inner {
+  max-width: var(--main-width, 720px);
+  margin: 0 auto;
+  padding: 0 var(--gap, 24px);
+}
+.footer-cats__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--rainier-text);
+  margin: 0 0 14px;
+  padding-left: 10px;
+  border-left: 4px solid var(--rainier-sun);
+  line-height: 1.2;
+}
+/* レーニアはカテゴリ名が長いので、入らない幅では自動で1列に落ちる */
+.footer-cats__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 8px;
+}
+.footer-cats__cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--rainier-card);
+  border: 2px solid var(--rainier-line);
+  border-radius: 999px;
+  padding: 10px 12px;
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--rainier-text) !important;
+  text-decoration: none !important;
+  line-height: 1.4;
+  transition: all .15s ease;
+}
+.footer-cats__cat:hover {
+  border-color: var(--rainier-sun);
+  color: var(--rainier-sun) !important;
+  transform: translateY(-1px);
+}
+.footer-cats__icon {
+  font-size: 1.1em;
+  line-height: 1;
+  flex-shrink: 0;
+}
+/* 長い名前は折り返してよい。はみ出して件数が隠れるのを防ぐ */
+.footer-cats__name {
+  min-width: 0;
+}
+.footer-cats__count {
+  font-size: .78em;
+  font-weight: 400;
+  opacity: .6;
+  margin-left: auto;
+  padding-left: 4px;
+  flex-shrink: 0;
+}
+
+/* カテゴリ一覧の下にタグ一覧が続くときは、間の線を消す */
+.footer-cats + .footer-tags {
+  margin-top: 0;
+  border-top: none;
+}
+
+/* ===========================================================
    フッターのタグ一覧
    =========================================================== */
 .footer-tags {
