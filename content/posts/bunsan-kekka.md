@@ -25,7 +25,7 @@ cover:
 | **評価損益** | **-3,036円** |
 | 損益率 | -1.07% |
 
-{{< voice c="maoneko" side="right" >}}思ったより動いいてないな{{< /voice >}}
+{{< voice c="maoneko" side="right" >}}思ったより動いてないな{{< /voice >}}
 
 {{< voice c="chapio" side="left" >}}そこが今日の本題ですよ！{{< /voice >}}
 
