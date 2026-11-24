@@ -230,6 +230,10 @@ body {
 .voice--kuromaku.voice--left  .voice__bubble::before{ border-right-color:#E2D0EF; }
 .voice--kuromaku.voice--right .voice__bubble::before{ border-left-color:#E2D0EF; }
 
+.voice--myuta    .voice__bubble{ border-color:#E8D5C0; }
+.voice--myuta.voice--left  .voice__bubble::before{ border-right-color:#E8D5C0; }
+.voice--myuta.voice--right .voice__bubble::before{ border-left-color:#E8D5C0; }
+
 @media (max-width:600px){
   .voice{ gap:9px; }
   .voice__icon{ flex:0 0 70px; width:70px; }

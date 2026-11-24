@@ -1,5 +1,5 @@
 {{- $c := .Get "c" | default "maoneko" -}}
-{{- $names := dict "maoneko" "まおねこ" "chapio" "チャピオ" "kuroko" "クロコ" "minai" "ミナイ" "kuromaku" "くろまく" -}}
+{{- $names := dict "maoneko" "まおねこ" "chapio" "チャピオ" "kuroko" "クロコ" "minai" "ミナイ" "kuromaku" "くろまく" "myuta" "ミュタ" -}}
 {{- $name := index $names $c | default "まおねこ" -}}
 {{- $side := .Get "side" | default "left" -}}
 {{/* mood="smile" などで表情違いのアイコンに差し替える（枠の色・名前はそのまま） */}}
